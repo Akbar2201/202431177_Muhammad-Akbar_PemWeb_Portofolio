@@ -1,0 +1,377 @@
+/* index */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "poppins", sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+header {
+    background: #140c85;
+    color: #fff;
+    padding: 15px;0
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00adb5;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 10%;
+    background: linear-gradient(135deg,#1911ae, #3588c0);
+    color: #fff;
+    text-align: center;
+}
+
+.hero-img { 
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px
+}
+
+#typing-text {
+  font-size: 1.3rem;
+  color: #f1f1f1;
+  border-right: 2px solid #f1f1f1;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {border-color: transparent;}
+}
+
+.about {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about h2{
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.skills {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skills h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  font-size: 1.1em;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/*PORTOFOLIO TABLE*/
+.portfolio-table {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.portfolio-table h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.portfolio-table p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background: #003366;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+  }
+
+  td {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #003366;
+  }
+}
+
+/* Kontainer utama */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Kartu kontak */
+.contact-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 40px 50px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-card h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.contact-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-info {
+  text-align: left;
+  margin: 30px 0;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/*Tombol Request Projek*/
+.button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-request {
+  display: inline-block;
+  background-color: #00bcd4;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,188,212,0.3);
+}
+
+.btn-request:hover {
+  background-color: #0097a7;
+  box-shadow: 0 6px 18px rgba(0,188,212,0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 25px 20px;
+  }
+  .contact-card h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Form Request Project */
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.request-form label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.request-form input,
+.request-form select,
+.request-form textarea {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.request-form input:focus,
+.request-form select:focus,
+.request-form textarea:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 4px rgba(0, 188, 212, 0.3);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.request-form button {
+  align-self: center;
+  margin-top: 15px;
+}
